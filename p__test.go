@@ -54,7 +54,7 @@ func TestRepeatedlyPermInt(t *testing.T) {
 		expected *= n
 	}
 	count := 0
-	for perm := range repeated_permutations(list, m, buf) {
+	for perm := range repeatedPermutations(list, m, buf) {
 		count++
 		//t.Log(count, comb)
 		_ = perm

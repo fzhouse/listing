@@ -52,7 +52,7 @@ func TestRepeatedlyCombInt(t *testing.T) {
 	m := 4
 	expected := H(n, m)
 	count := 0
-	for comb := range repeated_combinations(list, m, buf) {
+	for comb := range repeatedCombinations(list, m, buf) {
 		count++
 		_ = comb
 	}

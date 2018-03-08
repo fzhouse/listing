@@ -2,6 +2,7 @@ package listing
 
 var factorial = make(map[int]int)
 
+// Fac method
 func Fac(n int) int {
 	if len(factorial) < 2 {
 		factorial[0], factorial[1] = 1, 1
@@ -13,6 +14,7 @@ func Fac(n int) int {
 	return factorial[n]
 }
 
+// C method
 func C(n, m int) (result int) {
 	switch {
 	case n == m:
@@ -25,10 +27,12 @@ func C(n, m int) (result int) {
 	return result
 }
 
+// P method
 func P(n, m int) (result int) {
 	return Fac(n) / Fac(n-m)
 }
 
+// H method
 func H(n, m int) (result int) {
 	return C(n+m-1, m)
 }
